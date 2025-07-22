@@ -15,7 +15,7 @@ kubeadm本身也有版本，只能升级到kubeadm版本支持的k8s版本
 
 3、先drain一个node，排除pod与标记为不可分配
 ```
-kubectl drain node controlplane --ignore-daemonsets
+kubectl drain controlplane --ignore-daemonsets
 ```
 4、更新kubeadm的源，以升级1.32到1.33为例
 ```
