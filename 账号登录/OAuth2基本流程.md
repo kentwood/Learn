@@ -89,5 +89,3 @@ Authorization: Bearer ACCESS_TOKEN_HERE
 }
 ```
 - 知乎用此信息创建用户会话，完成登录。
-
-7. 
