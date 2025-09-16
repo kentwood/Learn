@@ -14,6 +14,25 @@ spec:
 ```
 这种情况下不需要scheduler参与
 
+另外，也可以使用node的标签来分类pod到node，但是使用nodeSelector标签需要scheduler参与
+```yaml
+pods/pod-nginx.yaml
+Copy pods/pod-nginx.yaml to clipboard
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  nodeSelector:
+    disktype: ssd
+```
+
 ### 2、使用标签查询资源
 ```
 kubectl get pods --selector env=dev

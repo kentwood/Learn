@@ -58,7 +58,7 @@ kubectl uncordon controlplane
 ```
 12、对其他节点进行drain
 ```
-kubeclt drain node01 --ignore-daemonsets
+kubectl drain node01 --ignore-daemonsets
 ```
 13、ssh到其他节点
 ```
